@@ -135,6 +135,12 @@
 
           </ul>
         </li>
+         <li>
+          <a href="/contact" class="hover:text-yellow-300">
+            English 友
+          </a>
+        </li>
+
 
       </ul>
     </div>

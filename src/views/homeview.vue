@@ -13,7 +13,7 @@ import viewImg from '/src/assets/images/view.jpg'
       <div class="absolute inset-0 bg-black/60"></div>
 
       <div class="relative z-10 text-center px-6 max-w-4xl">
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight text-white">
           Discover
           <span class="text-green-400">Rwanda</span>
         </h1>
