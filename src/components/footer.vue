@@ -9,6 +9,7 @@
         <h3 class="text-yellow-300 text-lg font-bold mb-4">
           Tembera U Rwanda
         </h3>
+        <p class="text-white">Discover more about rwanda</p>
 
         
       </div>
