@@ -1,10 +1,14 @@
+<script setup>
+import viewImg from '/src/assets/images/view.jpg'
+</script>
+
 <template>
   <div class="bg-gray-50 text-gray-800">
 
     <!-- HERO SECTION -->
     <section
       class="relative h-screen bg-cover bg-center flex items-center justify-center"
-      style="background-image: url('/src/assets/images/view.jpg');"
+      :style="{ backgroundImage: `url(${viewImg})` }"
     >
       <div class="absolute inset-0 bg-black/60"></div>
 
