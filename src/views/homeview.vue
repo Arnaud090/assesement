@@ -28,7 +28,7 @@ import viewImg from '/src/assets/images/view.jpg'
             Explore Now
           </button>
 
-          <button class="border border-white hover:bg-white hover:text-black px-8 py-3 rounded-full font-semibold transition duration-300">
+          <button class="border border-white hover:bg-white hover:text-black px-8 py-3 rounded-full font-semibold transition duration-300 text-white">
             Learn More
           </button>
         </div>
