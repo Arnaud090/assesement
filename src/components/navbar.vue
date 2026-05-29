@@ -135,12 +135,39 @@
 
           </ul>
         </li>
-         <li>
-          <a href="/contact" class="hover:text-yellow-300">
-            English 友
+      <li class="relative group">
+          <a
+            href="#"
+            class="hover:text-yellow-300 inline-flex items-center gap-1"
+          >
+      English 友
           </a>
-        </li>
 
+          <ul
+            class="absolute left-0 top-full invisible opacity-0
+                   group-hover:visible group-hover:opacity-100
+                   transition duration-300
+                   bg-white py-2 w-44 rounded shadow-lg z-50"
+          >
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 text-black hover:bg-green-600 hover:text-white"
+              >
+                English
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 text-black hover:bg-green-600 hover:text-white"
+              >
+                Kinyarwanda
+              </a>
+            </li>
+          </ul>
+        </li>
 
       </ul>
     </div>
