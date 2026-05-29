@@ -25,8 +25,7 @@
         ></div>
 
         <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-          We'd love to hear from you. Send us your questions, feedback, or just
-          say hello 👋
+          We'd love to hear from you. Send us your questions, feedback.
         </p>
       </div>
 
@@ -65,7 +64,7 @@
               >
                 📞
               </div>
-              <span>+250 700 000 000</span>
+              <span>+250 788 654 321</span>
             </div>
 
             <div
@@ -76,7 +75,7 @@
               >
                 ✉️
               </div>
-              <span>contact@example.com</span>
+              <span>ahantunyaburanga@gmail.com</span>
             </div>
           </div>
 

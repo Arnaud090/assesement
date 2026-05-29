@@ -4,7 +4,7 @@
     <!-- HERO SECTION -->
     <section
       class="relative h-screen bg-cover bg-center flex items-center justify-center"
-      style="background-image: url('/src/assets/images/img1.png');"
+      style="background-image: url('/src/assets/images/view.jpg');"
     >
       <div class="absolute inset-0 bg-black/60"></div>
 
@@ -37,7 +37,7 @@
 
         <div>
           <img
-            src="/src/assets/images/img1.png"
+            src="/src/assets/images/convertion.jpg"
             alt="Rwanda"
             class="rounded-3xl shadow-2xl"
           />
@@ -96,7 +96,7 @@
 
         <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:scale-105 transition duration-300">
           <img
-            src="/src/assets/images/img1.png"
+            src="/src/assets/images/kigali.jpg"
             class="h-60 w-full object-cover"
           />
 
@@ -110,7 +110,7 @@
 
         <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:scale-105 transition duration-300">
           <img
-            src="/src/assets/images/img1.png"
+            src="/src/assets/images/volcano.jpg"
             class="h-60 w-full object-cover"
           />
 
@@ -124,7 +124,7 @@
 
         <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:scale-105 transition duration-300">
           <img
-            src="/src/assets/images/img1.png"
+            src="/src/assets/images/kivu.jpg"
             class="h-60 w-full object-cover"
           />
 
