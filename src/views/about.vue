@@ -1,182 +1,82 @@
+<script setup>
+const milestones = [
+  { year: 2016, title: 'Founded', desc: 'Tembera u Rwanda was established with a vision to showcase Rwanda\'s beauty to the world.' },
+  { year: 2018, title: 'First 100 Travelers', desc: 'We welcomed our first 100 guests, all of whom fell in love with Rwanda\'s charm.' },
+  { year: 2020, title: 'Eco-Tourism Focus', desc: 'Launched sustainable tourism initiatives supporting conservation and local communities.' },
+  { year: 2022, title: 'Expanded Nationwide', desc: 'Extended our tours to all five provinces, covering every corner of Rwanda.' },
+  { year: 2024, title: '500+ Happy Travelers', desc: 'Celebrated half a thousand travelers with unforgettable Rwanda experiences.' },
+  { year: 2026, title: 'Award-Winning Service', desc: 'Recognized as one of Rwanda\'s top tour operators for excellence and innovation.' }
+]
+</script>
+
 <template>
-  <section
-    class="relative overflow-hidden bg-gradient-to-br from-green-50 via-white to-emerald-100 py-20"
-  >
-    <!-- Background Decorative Effects -->
-    <div
-      class="absolute top-0 left-0 w-72 h-72 bg-green-300/20 rounded-full blur-3xl animate-pulse"
-    ></div>
-
-    <div
-      class="absolute bottom-0 right-0 w-96 h-96 bg-emerald-400/20 rounded-full blur-3xl animate-pulse"
-    ></div>
-
-    <div class="container mx-auto px-6 relative z-10">
-      <!-- Header -->
-      <div class="text-center mb-16">
-        <h2
-          class="text-5xl font-extrabold text-green-700 mb-4 tracking-tight"
-        >
-          About Us
-        </h2>
-
-        <div
-          class="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-400 mx-auto rounded-full mb-6"
-        ></div>
-
-        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-          Welcome to
-          <span class="font-bold text-green-700">Tembera U Rwanda</span> —
-          your trusted partner for unforgettable travel experiences across the
-          Land of a Thousand Hills.
-        </p>
-      </div>
-
-      <!-- Main Content -->
-      <div
-        class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center"
-      >
-        <!-- Left Content -->
-        <div
-          class="bg-white/80 backdrop-blur-lg rounded-3xl p-10 shadow-2xl border border-green-100"
-        >
-          <h3 class="text-3xl font-bold text-green-700 mb-6">
-            Discover Rwanda With Passion
-          </h3>
-
-          <p class="text-gray-600 leading-relaxed mb-6">
-            At <span class="font-semibold">Tembera U Rwanda</span>, we believe
-            that travel is more than just visiting places — it’s about creating
-            memories, discovering cultures, and experiencing adventure in the
-            most authentic way possible.
-          </p>
-
-          <p class="text-gray-600 leading-relaxed mb-6">
-            Our mission is to connect travelers with the beauty of Rwanda
-            through expertly crafted tours, cultural experiences, wildlife
-            adventures, and personalized travel services.
-          </p>
-
-          <p class="text-gray-600 leading-relaxed">
-            Whether you are looking for gorilla trekking, luxury safaris,
-            breathtaking hiking trails, or cultural immersion, we are dedicated
-            to making your journey exceptional from start to finish.
-          </p>
-
-          <!-- Stats -->
-          <div class="grid grid-cols-3 gap-6 mt-10">
-            <div
-              class="text-center p-4 rounded-2xl bg-green-50 hover:bg-green-100 transition"
-            >
-              <h4 class="text-3xl font-extrabold text-green-700">10+</h4>
-              <p class="text-gray-600 text-sm">Years Experience</p>
-            </div>
-
-            <div
-              class="text-center p-4 rounded-2xl bg-green-50 hover:bg-green-100 transition"
-            >
-              <h4 class="text-3xl font-extrabold text-green-700">500+</h4>
-              <p class="text-gray-600 text-sm">Happy Travelers</p>
-            </div>
-
-            <div
-              class="text-center p-4 rounded-2xl bg-green-50 hover:bg-green-100 transition"
-            >
-              <h4 class="text-3xl font-extrabold text-green-700">24/7</h4>
-              <p class="text-gray-600 text-sm">Customer Support</p>
-            </div>
-          </div>
+  <div class="pt-20">
+    <section class="relative py-24 overflow-hidden bg-gradient-to-br from-green-50 via-white to-emerald-50">
+      <div class="absolute top-0 left-0 w-96 h-96 bg-green-300/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-0 w-96 h-96 bg-emerald-300/20 rounded-full blur-3xl"></div>
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-16">
+          <p class="text-green-600 font-semibold tracking-widest uppercase text-sm reveal">Who We Are</p>
+          <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mt-3 reveal reveal-delay-1">About Us</h1>
+          <div class="w-20 h-1 bg-gradient-to-r from-green-500 to-emerald-400 mx-auto rounded-full mt-4 reveal reveal-delay-2"></div>
         </div>
-
-        <!-- Right Image / Feature Cards -->
-        <div class="space-y-6">
-          <!-- Card -->
-          <div
-            class="group flex items-start gap-5 bg-white/80 backdrop-blur-lg rounded-3xl p-6 shadow-xl border border-green-100 hover:-translate-y-2 hover:shadow-2xl transition duration-500"
-          >
-            <div
-              class="w-16 h-16 flex items-center justify-center rounded-2xl bg-green-100 text-3xl group-hover:scale-110 transition"
-            >
-              🌍
-            </div>
-
-            <div>
-              <h4 class="text-2xl font-bold text-green-700 mb-2">
-                Authentic Experiences
-              </h4>
-
-              <p class="text-gray-600 leading-relaxed">
-                Experience Rwanda’s culture, traditions, and breathtaking
-                landscapes through carefully designed travel adventures.
-              </p>
-            </div>
+        <div class="max-w-5xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+          <div class="bg-white/80 backdrop-blur rounded-3xl p-10 shadow-2xl border border-green-100 reveal-left">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Discover Rwanda With Passion</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">At Tembera u Rwanda, we believe travel is about creating memories, discovering cultures, and experiencing adventure in the most authentic way possible.</p>
+            <p class="text-gray-600 leading-relaxed mb-4">Our mission is to connect travelers with the beauty of Rwanda through expertly crafted tours, cultural experiences, wildlife adventures, and personalized travel services.</p>
+            <p class="text-gray-600 leading-relaxed">Whether you are looking for gorilla trekking, luxury safaris, breathtaking hiking trails, or cultural immersion, we are dedicated to making your journey exceptional.</p>
           </div>
-
-          <!-- Card -->
-          <div
-            class="group flex items-start gap-5 bg-white/80 backdrop-blur-lg rounded-3xl p-6 shadow-xl border border-green-100 hover:-translate-y-2 hover:shadow-2xl transition duration-500"
-          >
-            <div
-              class="w-16 h-16 flex items-center justify-center rounded-2xl bg-emerald-100 text-3xl group-hover:scale-110 transition"
-            >
-              🦍
+          <div class="grid grid-cols-2 gap-4 reveal-right">
+            <div class="bg-white p-6 rounded-2xl shadow-md border border-green-100 text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <p class="text-4xl font-extrabold text-green-600">10+</p>
+              <p class="text-gray-500 text-sm mt-1">Years Exp.</p>
             </div>
-
-            <div>
-              <h4 class="text-2xl font-bold text-green-700 mb-2">
-                Wildlife Adventures
-              </h4>
-
-              <p class="text-gray-600 leading-relaxed">
-                Get closer to nature with gorilla trekking, safaris, and eco
-                tourism experiences guided by professionals.
-              </p>
+            <div class="bg-white p-6 rounded-2xl shadow-md border border-green-100 text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <p class="text-4xl font-extrabold text-green-600">500+</p>
+              <p class="text-gray-500 text-sm mt-1">Travelers</p>
             </div>
-          </div>
-
-          <!-- Card -->
-          <div
-            class="group flex items-start gap-5 bg-white/80 backdrop-blur-lg rounded-3xl p-6 shadow-xl border border-green-100 hover:-translate-y-2 hover:shadow-2xl transition duration-500"
-          >
-            <div
-              class="w-16 h-16 flex items-center justify-center rounded-2xl bg-green-100 text-3xl group-hover:scale-110 transition"
-            >
-              ❤️
+            <div class="bg-white p-6 rounded-2xl shadow-md border border-green-100 text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <p class="text-4xl font-extrabold text-green-600">5</p>
+              <p class="text-gray-500 text-sm mt-1">Provinces</p>
             </div>
-
-            <div>
-              <h4 class="text-2xl font-bold text-green-700 mb-2">
-                Customer Satisfaction
-              </h4>
-
-              <p class="text-gray-600 leading-relaxed">
-                We prioritize comfort, safety, and unforgettable memories for
-                every traveler who chooses to explore Rwanda with us.
-              </p>
+            <div class="bg-white p-6 rounded-2xl shadow-md border border-green-100 text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <p class="text-4xl font-extrabold text-green-600">24/7</p>
+              <p class="text-gray-500 text-sm mt-1">Support</p>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Bottom CTA -->
-      <div
-        class="mt-20 bg-gradient-to-r from-green-600 to-emerald-500 rounded-3xl p-10 text-center text-white shadow-2xl"
-      >
-        <h3 class="text-4xl font-extrabold mb-4">
-          Explore Rwanda With Confidence
-        </h3>
-
-        <p class="text-green-100 text-lg max-w-2xl mx-auto mb-8">
-          Join hundreds of travelers who have discovered the beauty, culture,
-          and adventure of Rwanda with Tembera U Rwanda.
-        </p>
-
-        <button
-          class="bg-white text-green-700 px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:bg-green-50 hover:scale-105 active:scale-95 transition duration-300"
-        >
-          Start Your Journey 🌿
-        </button>
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <p class="text-green-600 font-semibold tracking-widest uppercase text-sm reveal">Our Journey</p>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3 reveal reveal-delay-1">Company Timeline</h2>
+          <div class="w-20 h-1 bg-gradient-to-r from-green-500 to-emerald-400 mx-auto rounded-full mt-4 reveal reveal-delay-2"></div>
+        </div>
+        <div class="max-w-4xl mx-auto relative">
+          <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-green-400 via-emerald-400 to-green-400 hidden md:block"></div>
+          <div v-for="(m, i) in milestones" :key="i" class="relative pl-0 md:pl-20 pb-12 last:pb-0 reveal" :class="`reveal-delay-${i + 1}`">
+            <div class="hidden md:flex absolute left-4 top-1 w-8 h-8 rounded-full bg-green-500 text-white items-center justify-center text-xs font-bold shadow-lg shadow-green-500/30">✓</div>
+            <div :class="['bg-white rounded-2xl p-6 shadow-lg border border-green-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 card-stack', i % 2 === 0 ? 'md:mr-20' : 'md:ml-20']">
+              <span class="inline-block px-4 py-1 bg-green-100 text-green-700 rounded-full text-sm font-bold mb-3">{{ m.year }}</span>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">{{ m.title }}</h3>
+              <p class="text-gray-600 leading-relaxed">{{ m.desc }}</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="py-20 bg-gradient-to-r from-green-600 via-emerald-600 to-green-700 text-center px-6 relative overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.1),transparent_70%)]"></div>
+      <div class="max-w-3xl mx-auto relative z-10">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 reveal">Explore Rwanda With Confidence</h2>
+        <p class="text-lg text-green-100 mb-10 reveal reveal-delay-1">Join hundreds of travelers who have discovered the beauty, culture, and adventure of Rwanda with us.</p>
+        <a href="/services" class="bg-white text-green-700 px-12 py-4 rounded-full font-bold text-lg hover:bg-green-50 hover:scale-105 active:scale-95 transition-all duration-300 shadow-2xl inline-block reveal reveal-delay-2">Explore Our Services</a>
+      </div>
+    </section>
+  </div>
 </template>
