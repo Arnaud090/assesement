@@ -6,7 +6,6 @@ import Navbar from './components/navbar.vue'
 import { RouterView } from 'vue-router'
 import Footer from './components/footer.vue'
 
-const loading = ref(true)
 const showBackToTop = ref(false)
 
 watch(currentLang, () => {
@@ -15,7 +14,6 @@ watch(currentLang, () => {
 
 onMounted(() => {
   document.title = 'Tembera u Rwanda'
-  setTimeout(() => { loading.value = false }, 1800)
   window.addEventListener('scroll', handleScroll)
   initScrollReveal()
 })
@@ -98,17 +96,6 @@ const handleSwipe = (() => {
 
 <template>
   <div class="min-h-screen bg-white" @touchstart="handleSwipe.start" @touchend="handleSwipe.end">
-    <Transition name="fade">
-      <div v-if="loading" class="fixed inset-0 z-[9999] bg-gradient-to-br from-green-900 via-emerald-800 to-green-700 flex flex-col items-center justify-center">
-        <div class="relative">
-          <img src="/rwandalogo.png" alt="Rwanda" class="w-24 h-24 mb-6 animate-float" />
-        </div>
-        <div class="w-16 h-16 border-4 border-green-300 border-t-white rounded-full animate-spin mb-4"></div>
-        <h2 class="text-white text-2xl font-bold font-[Playfair_Display]">Tembera u Rwanda</h2>
-        <p class="text-green-200 text-sm mt-2 animate-pulse">{{ t('htmlDesc') }}</p>
-      </div>
-    </Transition>
-
     <Navbar />
     <main>
       <RouterView v-slot="{ Component }">
