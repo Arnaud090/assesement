@@ -1,5 +1,7 @@
 <script setup>
 import { ref } from 'vue'
+import { useI18n } from '../settings/i18n.js'
+const { t } = useI18n()
 import canopyImg from '/src/assets/images/Nyungwe Canopy Walk.jfif'
 import colobusImg from '/src/assets/images/100+ Colobus_ Primate Party.jfif'
 
@@ -39,10 +41,10 @@ function closeLightbox() {
 
       <div class="container mx-auto px-6 relative z-10">
         <div class="text-center mb-16">
-          <p class="text-green-600 font-semibold tracking-widest uppercase text-sm reveal">Gallery</p>
-          <h2 class="text-5xl font-extrabold text-green-700 mb-4 tracking-tight reveal reveal-delay-1">Explore Rwanda Gallery</h2>
+          <p class="text-green-600 font-semibold tracking-widest uppercase text-sm reveal">{{ t('image.section') }}</p>
+          <h2 class="text-5xl font-extrabold text-green-700 mb-4 tracking-tight reveal reveal-delay-1">{{ t('image.title') }}</h2>
           <div class="w-28 h-1 bg-gradient-to-r from-green-500 to-emerald-400 mx-auto rounded-full mb-6 reveal reveal-delay-2"></div>
-          <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto reveal reveal-delay-2">Discover the breathtaking beauty, wildlife, culture, and adventure that make Rwanda one of Africa's most amazing destinations.</p>
+          <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto reveal reveal-delay-2">{{ t('image.subtitle') }}</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -62,7 +64,7 @@ function closeLightbox() {
 
         <div class="text-center mt-16 reveal">
           <button class="bg-gradient-to-r from-green-600 to-emerald-500 text-white px-10 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300">
-            View More Destinations 📸
+            {{ t('image.viewMore') }}
           </button>
         </div>
       </div>

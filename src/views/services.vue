@@ -1,23 +1,26 @@
 <script setup>
 import { ref } from 'vue'
+import { useI18n } from '../settings/i18n.js'
+
+const { t } = useI18n()
 
 const flipped = ref(null)
 
 const services = [
-  { icon: 'globe', title: 'Guided Tours', desc: 'Explore Rwanda\'s most beautiful destinations with experienced local guides who provide rich historical and cultural insights.' },
-  { icon: 'gorilla', title: 'Gorilla Trekking', desc: 'Experience the thrill of meeting mountain gorillas in their natural habitat with safe and unforgettable trekking adventures.' },
-  { icon: 'tent', title: 'Adventure Activities', desc: 'Enjoy hiking, camping, zip-lining, kayaking, and other exciting outdoor adventures across Rwanda\'s landscapes.' },
-  { icon: 'hotel', title: 'Hotel Booking', desc: 'We arrange luxury, mid-range, and budget accommodations tailored to your comfort and travel preferences.' },
-  { icon: 'truck', title: 'Transportation', desc: 'Comfortable and reliable transport services including airport pickups, private tours, and intercity travel.' },
-  { icon: 'calendar', title: 'Custom Itineraries', desc: 'Personalized travel plans crafted around your interests, budget, and preferred travel experience.' }
+  { icon: 'globe', title: 'services.guidedTours', desc: 'services.guidedToursDesc' },
+  { icon: 'gorilla', title: 'services.gorillaTrekking', desc: 'services.gorillaTrekkingDesc' },
+  { icon: 'tent', title: 'services.adventure', desc: 'services.adventureDesc' },
+  { icon: 'hotel', title: 'services.hotelBooking', desc: 'services.hotelBookingDesc' },
+  { icon: 'truck', title: 'services.transportation', desc: 'services.transportationDesc' },
+  { icon: 'calendar', title: 'services.customItineraries', desc: 'services.customItinerariesDesc' }
 ]
 
 const faqs = ref([
-  { q: 'What is the best time to visit Rwanda?', a: 'The best time to visit Rwanda is during the dry seasons from June to September and December to February, ideal for gorilla trekking and wildlife viewing.', open: false },
-  { q: 'Do I need a visa to visit Rwanda?', a: 'Citizens of many countries can get a visa on arrival or apply for an e-visa online. Citizens of African Union countries enjoy visa-free travel.', open: false },
-  { q: 'Is gorilla trekking safe?', a: 'Yes, gorilla trekking is very safe. Our experienced guides and trackers ensure a secure and memorable experience while respecting wildlife guidelines.', open: false },
-  { q: 'What currency is used in Rwanda?', a: 'The Rwandan Franc (RWF) is the local currency. US dollars are widely accepted at hotels and major tour operators.', open: false },
-  { q: 'How do I book a tour?', a: 'You can book directly through our website, call us, or send an email. We will help design the perfect itinerary for you.', open: false }
+  { q: 'services.faqQ1', a: 'services.faqA1', open: false },
+  { q: 'services.faqQ2', a: 'services.faqA2', open: false },
+  { q: 'services.faqQ3', a: 'services.faqA3', open: false },
+  { q: 'services.faqQ4', a: 'services.faqA4', open: false },
+  { q: 'services.faqQ5', a: 'services.faqA5', open: false }
 ])
 
 function toggleFlip(index) {
@@ -36,10 +39,10 @@ function toggleFaq(index) {
       <div class="absolute bottom-0 right-0 w-96 h-96 bg-emerald-300/20 rounded-full blur-3xl"></div>
       <div class="max-w-7xl mx-auto px-6 relative z-10">
         <div class="text-center mb-16">
-          <p class="text-green-600 font-semibold tracking-widest uppercase text-sm reveal">What We Offer</p>
-          <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mt-3 reveal reveal-delay-1">Our Services</h1>
+          <p class="text-green-600 font-semibold tracking-widest uppercase text-sm reveal">{{ t('services.whatWeOffer') }}</p>
+          <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mt-3 reveal reveal-delay-1">{{ t('services.ourServices') }}</h1>
           <div class="w-20 h-1 bg-gradient-to-r from-green-500 to-emerald-400 mx-auto rounded-full mt-4 reveal reveal-delay-2"></div>
-          <p class="text-lg text-gray-600 max-w-3xl mx-auto mt-6 reveal reveal-delay-2">Discover Rwanda like never before with our premium tourism and travel services designed to create unforgettable experiences.</p>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto mt-6 reveal reveal-delay-2">{{ t('services.subtitle') }}</p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -54,12 +57,12 @@ function toggleFaq(index) {
                   <svg v-else-if="service.icon === 'truck'" class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l2-1m9 0l2 1m-2-1v-3a1 1 0 00-1-1h-3a1 1 0 00-1 1v3m8 1a2 2 0 100-4 2 2 0 000 4zM5 17a2 2 0 100-4 2 2 0 000 4z"/></svg>
                   <svg v-else-if="service.icon === 'calendar'" class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">{{ service.title }}</h3>
-                <p class="text-green-600 text-sm font-medium">Click to learn more →</p>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">{{ t(service.title) }}</h3>
+                <p class="text-green-600 text-sm font-medium">{{ t('services.clickToLearn') }}</p>
               </div>
               <div class="absolute inset-0 backface-hidden rotate-y-180 bg-gradient-to-br from-green-600 to-emerald-600 rounded-3xl p-8 shadow-xl flex flex-col items-center justify-center text-center text-white">
-                <h3 class="text-2xl font-bold mb-4">{{ service.title }}</h3>
-                <p class="text-green-100 leading-relaxed">{{ service.desc }}</p>
+                <h3 class="text-2xl font-bold mb-4">{{ t(service.title) }}</h3>
+                <p class="text-green-100 leading-relaxed">{{ t(service.desc) }}</p>
               </div>
             </div>
           </div>
@@ -70,19 +73,19 @@ function toggleFaq(index) {
     <section class="py-20 bg-white">
       <div class="max-w-4xl mx-auto px-6">
         <div class="text-center mb-16">
-          <p class="text-green-600 font-semibold tracking-widest uppercase text-sm reveal">Have Questions?</p>
-          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3 reveal reveal-delay-1">Frequently Asked Questions</h2>
+          <p class="text-green-600 font-semibold tracking-widest uppercase text-sm reveal">{{ t('services.faqSection') }}</p>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3 reveal reveal-delay-1">{{ t('services.faqTitle') }}</h2>
           <div class="w-20 h-1 bg-gradient-to-r from-green-500 to-emerald-400 mx-auto rounded-full mt-4 reveal reveal-delay-2"></div>
         </div>
         <div class="space-y-4">
           <div v-for="(faq, i) in faqs" :key="i" class="bg-white rounded-2xl border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-md reveal" :class="`reveal-delay-${i + 1}`">
             <button @click="toggleFaq(i)" class="w-full px-8 py-5 flex items-center justify-between text-left font-semibold text-gray-900 hover:text-green-600 transition">
-              <span>{{ faq.q }}</span>
+              <span>{{ t(faq.q) }}</span>
               <span :class="['text-xl transition-transform duration-300', faq.open ? 'rotate-45' : '']" class="text-green-500">+</span>
             </button>
             <Transition name="fade">
               <div v-if="faq.open" class="px-8 pb-5">
-                <p class="text-gray-600 leading-relaxed">{{ faq.a }}</p>
+                <p class="text-gray-600 leading-relaxed">{{ t(faq.a) }}</p>
               </div>
             </Transition>
           </div>
@@ -93,9 +96,9 @@ function toggleFaq(index) {
     <section class="py-20 bg-gradient-to-r from-green-600 via-emerald-600 to-green-700 text-center px-6 relative overflow-hidden">
       <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.1),transparent_70%)]"></div>
       <div class="max-w-3xl mx-auto relative z-10">
-        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 reveal">Ready for Your Rwanda Adventure?</h2>
-        <p class="text-lg text-green-100 mb-10 reveal reveal-delay-1">Let us help you create memories that last a lifetime with our world-class tourism services.</p>
-        <a href="/contact" class="bg-white text-green-700 px-12 py-4 rounded-full font-bold text-lg hover:bg-green-50 hover:scale-105 active:scale-95 transition-all duration-300 shadow-2xl inline-block reveal reveal-delay-2">Get in Touch</a>
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 reveal">{{ t('services.ctaTitle') }}</h2>
+        <p class="text-lg text-green-100 mb-10 reveal reveal-delay-1">{{ t('services.ctaDesc') }}</p>
+        <a href="/contact" class="bg-white text-green-700 px-12 py-4 rounded-full font-bold text-lg hover:bg-green-50 hover:scale-105 active:scale-95 transition-all duration-300 shadow-2xl inline-block reveal reveal-delay-2">{{ t('services.ctaButton') }}</a>
       </div>
     </section>
   </div>

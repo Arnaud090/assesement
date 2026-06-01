@@ -1,5 +1,7 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, watch, onMounted, onBeforeUnmount } from 'vue'
+import { useI18n } from './settings/i18n.js'
+const { t, currentLang } = useI18n()
 import Navbar from './components/navbar.vue'
 import { RouterView } from 'vue-router'
 import Footer from './components/footer.vue'
@@ -7,7 +9,12 @@ import Footer from './components/footer.vue'
 const loading = ref(true)
 const showBackToTop = ref(false)
 
+watch(currentLang, () => {
+  document.title = 'Tembera u Rwanda'
+})
+
 onMounted(() => {
+  document.title = 'Tembera u Rwanda'
   setTimeout(() => { loading.value = false }, 1800)
   window.addEventListener('scroll', handleScroll)
   initScrollReveal()
@@ -98,7 +105,7 @@ const handleSwipe = (() => {
         </div>
         <div class="w-16 h-16 border-4 border-green-300 border-t-white rounded-full animate-spin mb-4"></div>
         <h2 class="text-white text-2xl font-bold font-[Playfair_Display]">Tembera u Rwanda</h2>
-        <p class="text-green-200 text-sm mt-2 animate-pulse">Discover the Land of a Thousand Hills...</p>
+        <p class="text-green-200 text-sm mt-2 animate-pulse">{{ t('htmlDesc') }}</p>
       </div>
     </Transition>
 

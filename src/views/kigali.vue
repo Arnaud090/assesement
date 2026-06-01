@@ -3,6 +3,8 @@ import kigaliImg from '/src/assets/images/kigali.jpg'
 import kigali2Img from '/src/assets/images/Kigali - Rwanda.jfif'
 import viewImg from '/src/assets/images/view.jpg'
 import genocideImg from '/src/assets/images/genocide.jfif'
+import { useI18n } from '../settings/i18n.js'
+const { t } = useI18n()
 
 const attractions = [
   {
@@ -29,21 +31,21 @@ const attractions = [
       <img :src="kigaliImg" alt="Kigali" class="absolute inset-0 w-full h-full object-cover" />
       <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/70"></div>
       <div class="relative z-10 text-center px-6 max-w-4xl">
-        <p class="text-green-400 font-semibold tracking-[0.3em] uppercase text-sm mb-4 reveal">City</p>
-        <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 reveal reveal-delay-1">Kigali City</h1>
-        <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto reveal reveal-delay-2">Africa's cleanest city — a vibrant capital of hills, innovation, culture, and warm Rwandan hospitality.</p>
+        <p class="text-green-400 font-semibold tracking-[0.3em] uppercase text-sm mb-4 reveal">{{ t('kigali.city') }}</p>
+        <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 reveal reveal-delay-1">{{ t('kigali.title') }}</h1>
+        <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto reveal reveal-delay-2">{{ t('kigali.subtitle') }}</p>
       </div>
     </section>
 
     <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 reveal">Explore Kigali</h2>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 reveal">{{ t('kigali.exploreTitle') }}</h2>
           <div class="w-20 h-1 bg-gradient-to-r from-green-500 to-emerald-400 mx-auto rounded-full mt-4 reveal reveal-delay-1"></div>
         </div>
         <div class="max-w-4xl mx-auto text-center mb-16 reveal reveal-delay-2">
-          <p class="text-gray-600 text-lg leading-relaxed">Kigali is the sparkling heart of Rwanda — a city of rolling hills, tree-lined boulevards, and a vibrant cultural scene. Known as Africa's cleanest city, it blends modern development with deep tradition. From world-class restaurants to lively markets and memorials, Kigali offers something for every traveler.</p>
-          <p class="text-gray-600 text-lg leading-relaxed mt-6">Rebuilt after the 1994 genocide, Kigali today stands as a model of reconciliation and progress. Its streets are remarkably clean, plastic bags are banned, and it is considered one of the safest cities in Africa. With over one million people spread across multiple hills, the city offers panoramic views at every turn and a growing arts and food scene.</p>
+          <p class="text-gray-600 text-lg leading-relaxed">{{ t('kigali.desc1') }}</p>
+          <p class="text-gray-600 text-lg leading-relaxed mt-6">{{ t('kigali.desc2') }}</p>
         </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div v-for="(attraction, i) in attractions" :key="i" class="group bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 card-stack reveal" :class="`reveal-delay-${i + 1}`">
@@ -63,7 +65,7 @@ const attractions = [
       <div class="max-w-7xl mx-auto px-6">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="text-3xl font-bold text-gray-900 mb-6 reveal-left">Why Visit Kigali?</h2>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 reveal-left">{{ t('kigali.whyVisitTitle') }}</h2>
             <ul class="space-y-4">
               <li v-for="(item, i) in [
                 'Recognized as Africa\'s cleanest and safest city',
@@ -87,9 +89,9 @@ const attractions = [
     <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-12">
-          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 reveal">Find Kigali on the Map</h2>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 reveal">{{ t('kigali.mapTitle') }}</h2>
           <div class="w-20 h-1 bg-gradient-to-r from-green-500 to-emerald-400 mx-auto rounded-full mt-4 reveal reveal-delay-1"></div>
-          <p class="text-gray-600 text-lg mt-6 max-w-3xl mx-auto reveal reveal-delay-2">Kigali is centrally located in Rwanda, making it the perfect starting point for exploring the country. The city sits at 1,567 metres elevation, giving it a pleasant climate year-round. Use the map below to explore its location.</p>
+          <p class="text-gray-600 text-lg mt-6 max-w-3xl mx-auto reveal reveal-delay-2">{{ t('kigali.mapDesc') }}</p>
         </div>
         <div class="rounded-3xl overflow-hidden shadow-2xl border border-gray-200 reveal">
           <iframe
@@ -105,9 +107,9 @@ const attractions = [
         </div>
         <div class="grid md:grid-cols-3 gap-8 mt-12">
           <div v-for="(item, i) in [
-            { title: 'Central Location', desc: 'Kigali is within a 2-4 hour drive from most major attractions in Rwanda, including Akagera National Park and Nyungwe Forest.', icon: 'map-pin' },
-            { title: 'Kigali International Airport', desc: 'Rwanda\'s main international gateway connects the city to major hubs across Africa, Europe, the Middle East, and Asia.', icon: 'plane' },
-            { title: 'Climate & Weather', desc: 'Kigali enjoys a subtropical highland climate with average temperatures between 18-27°C (64-81°F) year-round.', icon: 'sun' }
+            { title: t('kigali.feature1Title'), desc: t('kigali.feature1Desc'), icon: 'map-pin' },
+            { title: t('kigali.feature2Title'), desc: t('kigali.feature2Desc'), icon: 'plane' },
+            { title: t('kigali.feature3Title'), desc: t('kigali.feature3Desc'), icon: 'sun' }
           ]" :key="i" class="text-center p-6 bg-green-50 rounded-2xl hover:bg-green-100 transition-all duration-300 hover:-translate-y-1 reveal" :class="`reveal-delay-${i + 1}`">
             <div class="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4">
               <svg v-if="item.icon === 'map-pin'" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
@@ -124,9 +126,9 @@ const attractions = [
     <section class="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-center px-6 relative overflow-hidden">
       <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.1),transparent_70%)]"></div>
       <div class="relative z-10 max-w-3xl mx-auto">
-        <h2 class="text-4xl font-bold text-white mb-6 reveal">Discover Kigali</h2>
-        <p class="text-lg text-green-100 mb-10 reveal reveal-delay-1">Experience the energy, warmth, and beauty of Rwanda's remarkable capital city.</p>
-        <a href="/contact" class="bg-white text-green-700 px-10 py-4 rounded-full font-bold hover:bg-green-50 hover:scale-105 active:scale-95 transition-all duration-300 shadow-2xl inline-block reveal reveal-delay-2">Plan Your Visit</a>
+        <h2 class="text-4xl font-bold text-white mb-6 reveal">{{ t('kigali.ctaTitle') }}</h2>
+        <p class="text-lg text-green-100 mb-10 reveal reveal-delay-1">{{ t('kigali.ctaDesc') }}</p>
+        <a href="/contact" class="bg-white text-green-700 px-10 py-4 rounded-full font-bold hover:bg-green-50 hover:scale-105 active:scale-95 transition-all duration-300 shadow-2xl inline-block reveal reveal-delay-2">{{ t('kigali.ctaButton') }}</a>
       </div>
     </section>
   </div>

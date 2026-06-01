@@ -1,4 +1,6 @@
 <script setup>
+import { useI18n } from '../settings/i18n.js'
+const { t } = useI18n()
 </script>
 
 <template>
@@ -8,49 +10,40 @@
       
       <div class="text-center mb-8">
         <h1 class="text-4xl font-bold text-blue-700 mb-2">
-          SOS Leaders Block
+          {{ t('helloWorld.title') }}
         </h1>
 
         <p class="text-gray-500">
-          School Leadership Team
+          {{ t('helloWorld.subtitle') }}
         </p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-6">
 
         <div class="bg-blue-50 rounded-2xl p-6 text-center shadow">
-         
-
           <h2 class="text-xl font-bold text-gray-800">
-            Principal
+            {{ t('helloWorld.principal') }}
           </h2>
-
           <p class="text-gray-600 mt-2">
-            HAKIZAYEZU Jean de Dieu
+            {{ t('helloWorld.principalName') }}
           </p>
         </div>
 
         <div class="bg-green-50 rounded-2xl p-6 text-center shadow">
-         
-
           <h2 class="text-xl font-bold text-gray-800">
-            Directer of displine
+            {{ t('helloWorld.disciplineDirector') }}
           </h2>
-
           <p class="text-gray-600 mt-2">
-            HAKIZAYEZU Jean de Dieu
+            {{ t('helloWorld.principalName') }}
           </p>
         </div>
 
         <div class="bg-purple-50 rounded-2xl p-6 text-center shadow">
-          
-
           <h2 class="text-xl font-bold text-gray-800">
-            Directer of Studies
+            {{ t('helloWorld.studiesDirector') }}
           </h2>
-
           <p class="text-gray-600 mt-2">
-            Zakali
+            {{ t('helloWorld.studiesDirectorName') }}
           </p>
         </div>
 

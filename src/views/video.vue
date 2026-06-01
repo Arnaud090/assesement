@@ -1,5 +1,7 @@
 <script setup>
 import { ref, computed } from 'vue'
+import { useI18n } from '../settings/i18n.js'
+const { t } = useI18n()
 
 const videos = [
   { id: 'prvGiinNSOQ', title: 'Tour du Rwanda - Cycling Race', cat: 'promo' },
@@ -19,13 +21,13 @@ const videos = [
 const activeFilter = ref('all')
 
 const categories = [
-  { key: 'all', label: 'All Videos' },
-  { key: 'promo', label: 'Promotional' },
-  { key: 'wildlife', label: 'Wildlife' },
-  { key: 'nature', label: 'Nature' },
-  { key: 'city', label: 'Cities' },
-  { key: 'culture', label: 'Culture' },
-  { key: 'adventure', label: 'Adventure' }
+  { key: 'all', label: 'video.all' },
+  { key: 'promo', label: 'video.promo' },
+  { key: 'wildlife', label: 'video.wildlife' },
+  { key: 'nature', label: 'video.nature' },
+  { key: 'city', label: 'video.cities' },
+  { key: 'culture', label: 'video.culture' },
+  { key: 'adventure', label: 'video.adventure' }
 ]
 
 const filteredVideos = computed(() => {
@@ -41,15 +43,15 @@ const filteredVideos = computed(() => {
       <div class="absolute bottom-0 right-0 w-96 h-96 bg-emerald-300/20 rounded-full blur-3xl"></div>
       <div class="max-w-7xl mx-auto px-6 relative z-10">
         <div class="text-center mb-16">
-          <p class="text-green-600 font-semibold tracking-widest uppercase text-sm reveal">Watch</p>
-          <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mt-3 reveal reveal-delay-1">Video Gallery</h1>
+          <p class="text-green-600 font-semibold tracking-widest uppercase text-sm reveal">{{ t('video.section') }}</p>
+          <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mt-3 reveal reveal-delay-1">{{ t('video.title') }}</h1>
           <div class="w-20 h-1 bg-gradient-to-r from-green-500 to-emerald-400 mx-auto rounded-full mt-4 reveal reveal-delay-2"></div>
-          <p class="text-lg text-gray-600 max-w-3xl mx-auto mt-6 reveal reveal-delay-2">Watch stunning videos showcasing the beauty, adventure, and culture of Rwanda.</p>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto mt-6 reveal reveal-delay-2">{{ t('video.subtitle') }}</p>
         </div>
 
         <div class="flex flex-wrap justify-center gap-3 mb-12 reveal reveal-delay-3">
           <button v-for="cat in categories" :key="cat.key" @click="activeFilter = cat.key" :class="['px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 active:scale-95', activeFilter === cat.key ? 'bg-green-600 text-white shadow-lg shadow-green-500/30' : 'bg-white text-gray-600 hover:text-green-600 border border-gray-200 hover:border-green-300']">
-            {{ cat.label }}
+            {{ t(cat.label) }}
           </button>
         </div>
 
