@@ -31,7 +31,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <nav :class="['fixed top-0 left-0 right-0 z-[999] transition-all duration-500', scrolled ? 'glass-dark shadow-2xl' : 'bg-green-700/90 backdrop-blur-sm']">
+  <nav class="fixed top-0 left-0 right-0 z-[999] bg-green-700/90 backdrop-blur-sm transition-all duration-500">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="flex items-center justify-between h-16 sm:h-20">
 

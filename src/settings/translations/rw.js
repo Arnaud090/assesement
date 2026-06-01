@@ -43,7 +43,7 @@ export default {
     email: 'ahantunyaburanga@gmail.com',
     address: 'Kigali, Rwanda',
     workingHours: 'Kuwa Mbere - Kuwa Gatandatu: 8:00 AM - 6:00 PM',
-    rights: '© 2026 Tembera U Rwanda. Uburenganzira bwose bwemejwe.',
+    rights: '© 2026 Tembera U Rwanda. Uburenganzira bwose bwemejwe. Byakozwe na Iranzi Sangwa Arnaud.',
     privacy: 'Amategeko y\'Ibanga',
     terms: 'Amategeko ya Serivisi'
   },

@@ -43,7 +43,7 @@ export default {
     email: 'ahantunyaburanga@gmail.com',
     address: 'Kigali, Rwanda',
     workingHours: 'Mon - Sat: 8:00 AM - 6:00 PM',
-    rights: '© 2026 Tembera U Rwanda. All rights reserved.',
+    rights: '© 2026 Tembera U Rwanda. All rights reserved. Designed by Iranzi Sangwa Arnaud.',
     privacy: 'Privacy Policy',
     terms: 'Terms of Service'
   },
