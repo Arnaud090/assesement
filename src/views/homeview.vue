@@ -5,7 +5,7 @@ import colobusImg from '/src/assets/images/100+ Colobus_ Primate Party.jfif'
 import kigaliImg from '/src/assets/images/kigali.jpg'
 import volcanoImg from '/src/assets/images/volcano.jpg'
 import kivuImg from '/src/assets/images/kivu.jpg'
-import gorillaImg from '/src/assets/images/gorilla.jpg'
+import akageraImg from '/src/assets/images/akagera giraffe.jpg'
 
 const stats = ref([
   { label: 'Happy Travelers', value: 500, suffix: '+' },
@@ -27,7 +27,7 @@ const destinations = [
   { name: 'Kigali City', desc: 'A clean, modern capital rich in culture and history.', img: kigaliImg },
   { name: 'Volcanoes National Park', desc: 'Home to majestic mountain gorillas and volcanic peaks.', img: volcanoImg },
   { name: 'Lake Kivu', desc: 'Serene beaches, island adventures, and stunning sunsets.', img: kivuImg },
-  { name: 'Akagera National Park', desc: 'Big five safaris and breathtaking savanna landscapes.', img: gorillaImg }
+  { name: 'Akagera National Park', desc: 'Big five safaris and breathtaking savanna landscapes.', img: akageraImg }
 ]
 
 function nextTestimonial() {
