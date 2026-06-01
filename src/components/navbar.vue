@@ -44,7 +44,6 @@ onBeforeUnmount(() => {
           <a href="/" :class="['px-3 py-2 rounded-xl text-sm font-medium transition-all duration-300 hover:bg-white/10', isActive('/') ? 'text-yellow-300' : 'text-white/90 hover:text-yellow-300']">{{ t('nav.home') }}</a>
           <a href="/about" :class="['px-3 py-2 rounded-xl text-sm font-medium transition-all duration-300 hover:bg-white/10', isActive('/about') ? 'text-yellow-300' : 'text-white/90 hover:text-yellow-300']">{{ t('nav.about') }}</a>
           <a href="/services" :class="['px-3 py-2 rounded-xl text-sm font-medium transition-all duration-300 hover:bg-white/10', isActive('/services') ? 'text-yellow-300' : 'text-white/90 hover:text-yellow-300']">{{ t('nav.services') }}</a>
-          <a href="/contact" :class="['px-3 py-2 rounded-xl text-sm font-medium transition-all duration-300 hover:bg-white/10', isActive('/contact') ? 'text-yellow-300' : 'text-white/90 hover:text-yellow-300']">{{ t('nav.contact') }}</a>
 
           <div class="relative group">
             <button class="px-3 py-2 rounded-xl text-sm font-medium transition-all duration-300 hover:bg-white/10 inline-flex items-center gap-1 cursor-pointer" :class="isActive('/video') || isActive('/image') ? 'text-yellow-300' : 'text-white/90 hover:text-yellow-300'">
@@ -72,6 +71,8 @@ onBeforeUnmount(() => {
               </div>
             </div>
           </div>
+
+          <a href="/contact" :class="['px-3 py-2 rounded-xl text-sm font-medium transition-all duration-300 hover:bg-white/10', isActive('/contact') ? 'text-yellow-300' : 'text-white/90 hover:text-yellow-300']">{{ t('nav.contact') }}</a>
 
           <div class="relative group" @mouseenter="langDropdownOpen = true" @mouseleave="langDropdownOpen = false">
             <button class="text-white/90 hover:text-yellow-300 px-3 py-2 rounded-xl text-sm font-medium transition-all duration-300 hover:bg-white/10 inline-flex items-center gap-1 cursor-pointer">
